@@ -79,9 +79,19 @@ async abrirOpcoes(tarefa:any){
           tarefa.feito=!tarefa.feito;
           this.atualizaLocalStorage
         }
+      },
+      {
+        text:'Cancelar',
+        icon: 'close',
+        role:'cancel',
+        handler:()=>{}
       }
     ]
   });
   actsheet.present()
+}
+excluir(tarefa:any){
+  this.tarefas = this.tarefas.filter(res => tarefa != res);
+  this.atualizaLocalStorage();
 }
 }
