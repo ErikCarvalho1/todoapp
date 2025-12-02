@@ -77,7 +77,7 @@ async abrirOpcoes(tarefa:any){
         icon:tarefa.feito?'radio-button-off':'checkmark-cicle',
         handler:()=>{
           tarefa.feito=!tarefa.feito;
-          this.atualizaLocalStorage
+          this.atualizaLocalStorage()
         }
       },
       {
